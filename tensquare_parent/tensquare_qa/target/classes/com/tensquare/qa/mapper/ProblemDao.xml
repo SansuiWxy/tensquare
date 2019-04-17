@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tensquare.qa.dao.ProblemDao">
+
+    <sql id="allColumn">
+        id,title,content,createtime,updatetime,userid,nickname,visits,thumbup,
+        reply,solve,replyname,replytime
+    </sql>
+
+    <select id="findNewReplyList" resultType="com.tensquare.qa.pojo.Problem">
+        select
+        <include refid="allColumn"/>
+        from tensquare_qa.tb_problem
+        where tb_problem.id in
+        ( select problemid
+        from tb_pl
+        where labelid = #{labelid})
+        order by replytime desc
+    </select>
+</mapper>

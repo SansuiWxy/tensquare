@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tensquare.recruit.dao.RecruitDao">
+
+    <sql id="allColumn">
+        id,jobname,salary,'condition',education,type,address,eid,DATE_FORMAT(createtime,"%Y-%m-%d %H:%i:%s") as createtime,state,url,label,content1,content2
+    </sql>
+
+    <!-- 根据是否推荐状态查询前4位，并按时间降序 -->
+    <select id="findTop4ByStatesOrderByCreatetimeDesc" resultType="com.tensquare.recruit.pojo.Recruit">
+        select
+        <include refid="allColumn"/>
+        from tb_recruit
+        where state = #{state}
+        ORDER BY createtime desc
+        limit 4
+    </select>
+
+    <!-- 查询状态不为0并以创建日期降序排序，查询前12条记录  state: 0：关闭 1:开启 2：推荐 -->
+    <select id="findTop12ByStatesNot0AndOrderByCreatetimeDesc" resultType="com.tensquare.recruit.pojo.Recruit">
+        select
+        <include refid="allColumn"/>
+        from tb_recruit
+        where state != #{state}
+        ORDER BY createtime desc
+        limit 12
+    </select>
+    <select id="selectAllList" resultType="com.tensquare.recruit.pojo.Recruit">
+        select
+        <include refid="allColumn"/>
+        from tb_recruit
+    </select>
+</mapper>

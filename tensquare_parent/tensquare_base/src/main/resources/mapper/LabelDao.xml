@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tensquare.base.dao.LabelDao">
+
+    <insert id="insert" parameterType="com.tensquare.base.pojo.Label">
+      insert into tb_label(labelname,state,count,recommend,fans)
+      values (#{label.labelname},#{label.state},#{label.count},#{label.recommend},#{label.fans})
+    </insert>
+
+    <!--<select id="findSearch" resultType="com.tensquare.base.pojo.Label" parameterType="com.tensquare.base.pojo.Label">
+        select *
+        from tb_label
+        where
+        labelname like '%'#{labelname}'%'
+    </select>-->
+
+
+</mapper>

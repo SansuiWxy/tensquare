@@ -1,0 +1,10 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: "tensquare-spit"  #指定服务名
+  data:
+    mongodb:
+      uri: "mongodb://192.168.124.61:27017/spitdb"
+  redis:
+    host: "192.168.124.61"
