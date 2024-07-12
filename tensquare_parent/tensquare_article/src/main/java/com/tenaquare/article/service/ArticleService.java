@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.service.IService;
 import com.tenaquare.article.pojo.Article;
 
 /**
- * @description: 文章模块业务层接口
+ * @description: 文章模块业务层接口 dev 修改2
  * @author: caipeng
  * @create: 2019-04-12 18:20
  */

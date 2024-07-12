@@ -12,7 +12,7 @@ import java.util.Date;
 
 /**
  * @description: 文章实体类
- * @author: caipeng
+ * @author: caipeng dev修改点1
  * @create: 2019-04-12 18:20
  */
 @TableName(value = "tb_article")
