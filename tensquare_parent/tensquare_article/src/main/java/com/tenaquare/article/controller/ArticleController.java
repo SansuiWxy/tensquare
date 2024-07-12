@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @create: 2019-04-12 18:26
  */
 @RestController("/article")
-@Api(value = "文章模块服务接口", description = "文章模块服务接口")
+@Api(value = "文章模块服务接口", description = "文章模块服务接口 测试cherry pick11")
 public class ArticleController {
 
     @Autowired
