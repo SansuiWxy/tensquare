@@ -10,7 +10,7 @@ import com.tenaquare.article.pojo.Article;
  */
 public interface ArticleService extends IService<Article> {
     /**
-     * 文章审核 0：未审核 1：已审核
+     * 文章审核 0：未审核 1：已审核 22
      *
      * @param id
      * @return
