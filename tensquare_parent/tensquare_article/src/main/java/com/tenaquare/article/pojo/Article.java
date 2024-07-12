@@ -11,6 +11,8 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
+ * @description: 文章实体类 修改测试点111
+ * @author: caipeng
  * @description: 文章实体类
  * @author: caipeng dev修改点1
  * @create: 2019-04-12 18:20
