@@ -34,6 +34,7 @@ public class ArticleController {
         if (flag) {
             return new Result(true, StatusCode.OK, "审核成功");
         }
+        System.out.println("flag = " + flag);
         return new Result(false, StatusCode.ERROR, "审核失败");
 
     }
